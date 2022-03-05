@@ -220,6 +220,8 @@ div[class*=-circle] i{
     height: 100%;
     width: 100%;
     border-radius:2%;
+    box-shadow: 1px 1px 20px 3px rgba(161, 160, 160, 0.37);
+
 }
 
 .img-grid .grid4 a,
@@ -331,6 +333,7 @@ footer{
     background: rgb(33, 40, 50);
     color:var(--sec-font-color);
 }
+
 .flex-footer{
     display:flex;
     justify-content: space-between;
@@ -382,6 +385,11 @@ footer{
     }
     .footer-bottom p{
         margin-bottom:20px;
+    }
+    .flex-footer div{
+        margin-bottom:30px;
+        margin-top:20px;
+        
     }
 }
 
