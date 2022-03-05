@@ -358,6 +358,9 @@ footer{
     color:var(--sec-font-color);
     font-size: 1.1rem;
 }
+.flex-footer li a:hover{
+    text-decoration: underline;
+}
 .flex-footer div div{
     margin-top:20px;
 }
