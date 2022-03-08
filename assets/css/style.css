@@ -23,9 +23,14 @@
 
 
 .container{
-    max-width: 1100px;
+    max-width: 1200px;
     padding:0 20px;
     margin:auto;
+}
+@media(max-width:800px){
+    .container{
+        max-width: 700px;
+    }
 }
 ul{
     list-style-type:none;
@@ -147,11 +152,8 @@ a{
     line-height: 2rem;
     color:var(--sec-font-color);
 }
-@media(max-width:300px){
-    .hero-section img{
-        width:180px;
-    }
-}
+
+
 /*---------------Services------------------------*/
 /* .red-circle{
     border-radius:100%;
@@ -194,9 +196,9 @@ div[class*=-circle] i{
 .blue-circle{
     background-color: rgb(13, 77, 255);
 }
-.services div > :first-child{
+/* .services div > :first-child{
     
-}
+} */
 
 .services div h2{
     margin: 10px 0;
