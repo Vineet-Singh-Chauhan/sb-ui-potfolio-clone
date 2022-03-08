@@ -44,6 +44,7 @@ a{
     justify-content: space-between;
     padding-top: 30px;
     font-size:1.2rem;
+    transition: 0.5s;
     /* align-items: center; */
 }
 
@@ -421,7 +422,7 @@ footer{
     margin-top:90px;
     background:white;
     border-radius: 3px 0 0 3px  ;
-    transform:translateX(-48px);
+    transform:translateX(-47px);
     box-shadow: -4px 1px 20px 3px rgba(0, 0, 0, 0.37);
     
 
@@ -453,6 +454,7 @@ footer{
     /* background:red; */
     /* border-radius: 3px 0 0 3px  ; */
     transform: translateX(var(--palette-width));
+    transition: 0.5s;
 }
 .palette{
     width:var(--palette-width);
@@ -471,6 +473,8 @@ footer{
     margin:0px 30px 30px 30px;
     font-weight: 700;
     color:var(--sec-font-color);
+    background: white;
+
 
 }
 .palette-collection{
