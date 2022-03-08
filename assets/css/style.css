@@ -2,15 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --pri-back-color:rgb(0, 80, 228);
-    --sec-back-color:rgb(124, 185, 255);
-    --pri-font-color:rgb(36, 38, 43);
-    --sec-font-color:rgb(133, 130, 130);
+    
     font-family: 'Blinker', sans-serif;;
 }
 :root{
         font-size: 16px;
+        --pri-back-color:rgb(0, 80, 228);
+        --sec-back-color:rgb(124, 185, 255);
+        --pri-font-color:rgb(36, 38, 43);
+        --sec-font-color:rgb(133, 130, 130);
+        --default-color:rgb(0, 80, 228);
+        --flat-color:rgb(52, 178, 228);
+        --sunset-color:rgb(248, 53, 53);
+        --subtle-color:rgb(135, 138, 130);
+        --seafoam-color:rgb(22, 112, 38);
+        --palette-width:360px;
+
 }
+
+
 
 .container{
     max-width: 1100px;
@@ -62,7 +72,10 @@ a{
     transition: 0.3s;
 }
 .navbar button:hover{
-    background: rgb(2, 45, 163);
+    background: var(--pri-back-color);
+    /* background-color:  rgb(71, 69, 69); */
+    background-blend-mode:darken;
+    cursor: pointer;
 }
 .Navbar__Link-toggle {
     display: none;
@@ -239,7 +252,7 @@ div[class*=-circle] i{
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #006effe7;
+  background-color: var(--pri-back-color);
     border-radius:2%;
   }
   .text{
@@ -264,7 +277,7 @@ div[class*=-circle] i{
 
 .img-grid .grid4 a:hover .overlay,
 .img-grid .grid5 a:hover .overlay{
-    opacity: 1;
+    opacity: 0.9;
 }
 
 
@@ -296,7 +309,7 @@ div[class*=-circle] i{
     margin:10px;
 }
 .card p a{
-    color:rgb(0, 114, 207);
+    color:var(--pri-back-color);
 }
 .card p a:hover{
     text-decoration: underline;
@@ -397,6 +410,151 @@ footer{
     }
 }
 
+/*-----------------theme-switcher-------------------*/
+.theme-btn{
+    /* height:50px;
+    width:50px; */
+    padding: 15px;
+    position:absolute;
+    left:0;
+    top:0;
+    margin-top:90px;
+    background:white;
+    border-radius: 3px 0 0 3px  ;
+    transform:translateX(-48px);
+    box-shadow: -4px 1px 20px 3px rgba(0, 0, 0, 0.37);
+    
+
+}
+.theme-btn i{
+    font-size: 1.1rem;
+    place-self: center;
+    /* animation-name: rotor;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-fill-mode: linear; */
+    animation:rotor 2s infinite linear;
+
+}
+@keyframes rotor{
+    0%{transform:rotate(0deg);}
+    /* 50%{transform:rotate(180deg);} */
+    100%{transform:rotate(359deg);}
+}
+.theme-plate{
+    /* padding: 15px; */
+    position:fixed;
+    right:0;
+    top:0;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.274) ;
+    /* height:100%; */
+    /* margin-top:90px; */
+    /* background:red; */
+    /* border-radius: 3px 0 0 3px  ; */
+    transform: translateX(var(--palette-width));
+}
+.palette{
+    width:var(--palette-width);
+    
+}
+.palette-head{
+    font-weight: 900;
+    color:var(--sec-font-color);
+    background: white;
+    font-size: 1.1rem;
+    padding:30px;
+    box-shadow: 0px 10px 10px  rgba(161, 160, 160, 0.37);
+    
+}
+.palette-collection > p{
+    margin:0px 30px 30px 30px;
+    font-weight: 700;
+    color:var(--sec-font-color);
+
+}
+.palette-collection{
+    overflow-y: scroll;
+    padding: 20px;
+    height:90vh;
+    background: white;
+   
+}
+.palette-collection::-webkit-scrollbar {
+    width: 7px;
+  }
+.palette-collection::-webkit-scrollbar-thumb {
+    background: rgb(155, 151, 151);
+    border-radius: 20px;
+  }
+.palette-collection::-webkit-scrollbar-thumb:hover {
+    background: rgb(131, 130, 130);
+  }
+.color-palette{
+    width:95%;
+    padding:20px 10px 20px 10px;
+    font-size:1.1rem;
+    margin-bottom:10px;
+    color:white;
+    font-weight: 500;
+    border-radius:5px;
+    
+}
+.color-palette:hover{
+    cursor:pointer;
+}
+
+
+.default{
+    background: var(--default-color);
+}
+.flat{
+    background: var(--flat-color);
+}
+.sunset{
+    background: var(--sunset-color);
+}
+.subtle{
+    background: var(--subtle-color);
+}
+.seafoam{
+    background: var(--seafoam-color);
+}
+.green{
+    background: yellowgreen;
+}
+.pink{
+    background: pink;
+}
+.aqua{
+    background: aqua;
+}
+.orange{
+    background: orange;
+}
+.tomato{
+    background: tomato;
+}
+
+/* @media(max-width:992px){
+    .palette{
+        --palette-width:300px;
+    }
+    .theme-plate{
+    transform: translateX(var(--palette-width));
+
+    }
+} */
+/* @media(max-width:500px){
+    .palette{
+        --palette-width:150px;
+        
+    }
+    .theme-plate{
+        transform: translateX(var(--palette-width));
+    
+        }
+} */
 /*-----------------utilities-------------------*/
 .my{
     margin-top: 3rem;
