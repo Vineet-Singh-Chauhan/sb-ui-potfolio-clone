@@ -215,56 +215,179 @@ function showColor2() {
 
 
 //-----------------------dropdowns---------------------------//
-// {
-//     let tVar = false;
-//     let toggleBtn = document.querySelector(".landinglink");
-//     let menu = document.querySelector(".landing");
+{
+    let tVar = false;
+    let toggleBtn = document.querySelector(".landinglink");
+    let menu = document.querySelector(".landing");
 
-//     toggleBtn.addEventListener("click", toggle);
-//     // toggleBtn.addEventListener("c", toggle);
+    toggleBtn.addEventListener("click", toggle);
+    // toggleBtn.addEventListener("c", toggle);
 
-//     function toggle() {
-//         if (tVar === false) {
-//             show();
-//             tVar = true;
-//             console.log(tVar)
+    function toggle() {
+        if (tVar === false) {
+            show();
+            tVar = true;
+            console.log(tVar)
 
-//         }
-//         else if (tVar === true) {
-//             hide();
-//             tVar = false
-//             console.log(tVar)
-//         }
-
-
-//     }
-
-//     function show() {
-//         //  console.log(menu)
-//         console.log(tVar)
-//         menu.style.top = "var(--drop-width)";
-//         menu.style.opacity = "1";
-
-//     }
-
-//     function hide() {
-//         // let menu=document.querySelectorAll(".navbar li");
-//         //  console.log(menu)
-
-//         menu.style.top = "-1000px";
-//         menu.style.opacity = "0";
-
-//     }
-//     window.onclick = function (e) {
-
-//         if (tVar == true) {
-//             if (e.target.matches('.landing') || !e.target.matches('.landinglink')) {
-//                 hide();
-//                 // console.log("FDF")
+        }
+        else if (tVar === true) {
+            hide();
+            tVar = false
+            console.log(tVar)
+        }
 
 
-//             }
-//         }
-//     }
+    }
 
-// }
+    function show() {
+        //  console.log(menu)
+        
+        // menu.style.top = "var(--drop-width)";
+        menu.style.opacity = "1";
+        menu.classList.remove('d-none');
+        console.log(menu.classList)
+
+    }
+
+    function hide() {
+        // let menu=document.querySelectorAll(".navbar li");
+        //  console.log(menu)
+
+        // menu.style.top = "-1000px";
+        menu.style.opacity = "0";
+        menu.classList.add('d-none');
+        console.log(menu.classList)
+
+    }
+    window.onclick = function (e) {
+
+        if (tVar == true) {
+            if (e.target.matches('.landing') || !e.target.matches('.landinglink')) {
+                hide();
+                tVar=false;
+                // console.log("FDF")
+
+
+            }
+        }
+    }
+
+}
+//-------------------------pages drop-----------------------------------------//
+{
+    let tVar = false;
+    let toggleBtn = document.querySelector(".page-link");
+    let menu = document.querySelector(".pages");
+
+    toggleBtn.addEventListener("click", toggle);
+    // toggleBtn.addEventListener("c", toggle);
+
+    function toggle() {
+        if (tVar === false) {
+            show();
+            tVar = true;
+            console.log(tVar)
+
+        }
+        else if (tVar === true) {
+            hide();
+            tVar = false
+            console.log(tVar)
+        }
+
+
+    }
+
+    function show() {
+        //  console.log(menu)
+        
+        // menu.style.top = "var(--drop-width)";
+        menu.style.opacity = "1";
+        menu.classList.remove('d-none');
+        console.log(menu.classList)
+
+    }
+
+    function hide() {
+        // let menu=document.querySelectorAll(".navbar li");
+        //  console.log(menu)
+
+        // menu.style.top = "-1000px";
+        menu.style.opacity = "0";
+        menu.classList.add('d-none');
+        console.log(menu.classList)
+
+    }
+    window.onclick = function (e) {
+
+        if (tVar == true) {
+            if (e.target.matches('.pages') || !e.target.matches('.page-link')) {
+                hide();
+                tVar=false;
+                // console.log("FDF")
+
+
+            }
+        }
+    }
+
+}
+//------------------documentation------------------/
+{
+    let tVar = false;
+    let toggleBtn = document.querySelector(".doc-link");
+    let menu = document.querySelector(".docs");
+
+    toggleBtn.addEventListener("click", toggle);
+    // toggleBtn.addEventListener("c", toggle);
+
+    function toggle() {
+        if (tVar === false) {
+            show();
+            tVar = true;
+            console.log(tVar)
+
+        }
+        else if (tVar === true) {
+            hide();
+            tVar = false
+            console.log(tVar)
+        }
+
+
+    }
+
+    function show() {
+        //  console.log(menu)
+        
+        // menu.style.top = "var(--drop-width)";
+        menu.style.opacity = "1";
+        menu.classList.remove('d-none');
+        console.log(menu.classList)
+
+    }
+
+    function hide() {
+        // let menu=document.querySelectorAll(".navbar li");
+        //  console.log(menu)
+
+        // menu.style.top = "-1000px";
+        menu.style.opacity = "0";
+        menu.classList.add('d-none');
+        console.log(menu.classList)
+
+    }
+    window.onclick = function (e) {
+
+        if (tVar == true) {
+            if (e.target.matches('.docs') || !e.target.matches('.doc-link')) {
+                hide();
+                tVar=false;
+                // console.log("FDF")
+
+
+            }
+        }
+    }
+
+}

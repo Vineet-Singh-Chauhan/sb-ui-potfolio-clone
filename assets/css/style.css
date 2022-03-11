@@ -8,7 +8,7 @@
 :root{
         font-size: 16px;
         --pri-back-color:rgb(0, 80, 228);
-        --sec-back-color:rgb(0, 71, 151);
+        --sec-back-color:rgb(103, 170, 247);
         --pri-font-color:rgb(36, 38, 43);
         --sec-font-color:rgb(139, 138, 138);
         --default-color:rgb(0, 80, 228);
@@ -132,11 +132,11 @@ a{
 }
 .dropdown .griddropdown{
     padding:30px 50px 10px 50px;
-    gap:60px;
+    gap:40px;
 }
 .dropdown div img{
     height: 100%;
-    width:330px;
+    width:300px;
     border-radius: 5px 0 0 5px;
 }
 
@@ -148,8 +148,13 @@ a{
     margin:0;
     padding:8px 0;
     font-size: 1rem;
+    
 
 
+}
+.dropdown ul li a{ 
+    margin:0;
+    color:black ;
 }
 .dropdown ul li a:hover{
     color:var(--sec-font-color);
@@ -192,12 +197,14 @@ a{
   }
   .drop-btn{
       color:var(--pri-back-color);
-      background: white;
+      background: white !important;
+      color:var(--pri-back-color) !important;
       border:none;
       border-radius: 3px;
       padding: 8px 15px;
       font-size: 1rem;
       margin-top:20px;
+      margin-left: 0 !important;
     font-weight: 550;
   }
   .drop-btn:hover{
@@ -211,32 +218,60 @@ a{
     width:330px;
     border-radius: 5px 0 0 5px;
 }
-@media(max-width:992px){
-    .drop-image{
-        display: none;
-    }
-}
+
 /*---------------------dropdown-customizing-------------------------*/
 .pages{
     padding:50px 0px 10px 50px; 
     position: absolute;
-    left:20%;
-    display: none;
+    left:-300px;
+    /* display: none; */
 
 }
 .pages ul,
 .pages b{
-    margin-right:90px;
+    margin-right:60px;
     
 }
 .landing{
     position: absolute;
-    left:15%;
-    top:-1000px;
+    left:-400px;
+    /* top:-1000px; */
     transition:0.5s ease;
     opacity: 0;
     /* display:none; */
     /* visibility:hidden; */
+}
+@media(max-width:992px){
+    .drop-image{
+        display: none;
+    }
+    .landing{
+        left:0;
+        position: relative;
+    }
+    .pages{
+        left:0;
+    }
+    .pages .grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media(max-width:550px){
+    .pages .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:450px){
+    .pages .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.relative{
+    position: relative;
+}
+
+.d-none{
+    display:none;
 }
 /* .landinglink:hover{
     
@@ -244,8 +279,9 @@ a{
 .docs{
     padding: 0 !important;
     position: absolute;
-    left:45%;
-    display: none;
+    left:0;
+    margin-top: 10px;
+    /* display: none; */
 
 }
 .docs hr{
@@ -883,7 +919,7 @@ footer{
     /* text-align:center; */
     height: 100%; 
 }
-@media(max-width:992px){
+@media(max-width:400px){
     .griddropdown{
     grid-template-columns: repeat(1,1fr);
     }
