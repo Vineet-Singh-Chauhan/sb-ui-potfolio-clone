@@ -1,40 +1,60 @@
 
 //--------------------navbar----------------------------------//
+// let windowWidth=document.body.clientWidth;
+// console.log(windowWidth)
+// if(windowWidth>=992){
+//     menu.forEach(function (element) {
+//         element.style.display = "inline";
+//     }
+//     )}
+{
+    let tVar = false;
+    let toggleBtn = document.querySelector(".tBtn");
+    let menu = document.querySelectorAll(".navbar li");
 
-let tVar = false;
-let toggleBtn = document.querySelector(".tBtn");
-let menu = document.querySelectorAll(".navbar li");
+    toggleBtn.addEventListener("click", toggle);
 
-toggleBtn.addEventListener("click", toggle);
+    function toggle() {
+        if (tVar === false ) {
+            show();
+            tVar = true;
+        }
+        else if (tVar === true ) {
+            hide();
+            tVar = false
+        }
+        // console.log(tVar)
 
-function toggle() {
-    if (tVar === false) {
-        show();
-        tVar = true;
     }
-    else if (tVar === true) {
-        hide();
-        tVar = false
+
+    function show() {
+        //  console.log(menu)
+
+        menu.forEach(function (element) {
+            element.style.display = "block";
+        })
     }
-    // console.log(tVar)
 
-}
+    function hide() {
+        // let menu=document.querySelectorAll(".navbar li");
+        //  console.log(menu)
 
-function show() {
-    //  console.log(menu)
+        menu.forEach(function (element) {
+            element.style.display = "none";
+        })
+    }
+    // window.onclick = function(e) {
 
-    menu.forEach(function (element) {
-        element.style.display = "block";
-    })
-}
+    //     if(tVar==true){
+    //     if (!e.target.matches('.navbar') || !e.target.matches('.tBtn') ) {
+    //         hide();
+    //         // console.log("FDF")
 
-function hide() {
-    // let menu=document.querySelectorAll(".navbar li");
-    //  console.log(menu)
 
-    menu.forEach(function (element) {
-        element.style.display = "none";
-    })
+    //     }
+    //   }
+    // }
+
 }
 
 
@@ -82,75 +102,169 @@ function hidePalette() {
 //     // document.documentElement.style.setProperty('--pri-back-color', 'red');
 // }
 
-let defaultSwitch=document.querySelector('.default');
-let flatSwitch=document.querySelector('.flat');
-let sunsetSwitch=document.querySelector('.sunset');
-let subtleSwitch=document.querySelector('.subtle');
-let seafoamSwitch=document.querySelector('.seafoam');
-let greenSwitch=document.querySelector('.green');
-let pinkSwitch=document.querySelector('.pink');
-let aquaSwitch=document.querySelector('.aqua');
-let orangeSwitch=document.querySelector('.orange');
-let tomatoSwitch=document.querySelector('.tomato');
-let targetedElements=document.documentElement;
+let defaultSwitch = document.querySelector('.default');
+let flatSwitch = document.querySelector('.flat');
+let sunsetSwitch = document.querySelector('.sunset');
+let subtleSwitch = document.querySelector('.subtle');
+let seafoamSwitch = document.querySelector('.seafoam');
+let greenSwitch = document.querySelector('.pri-color');
+let pinkSwitch = document.querySelector('.sec-color');
+
+let targetedElements = document.documentElement;
 
 
-defaultSwitch.addEventListener("click",defaultColor);
-function defaultColor(){
-    
+defaultSwitch.addEventListener("click", defaultColor);
+function defaultColor() {
+
     document.documentElement.style.setProperty('--pri-back-color', 'rgb(0, 80, 228)');
+    document.documentElement.style.setProperty('--sec-back-color', 'var(--default-sec-color');
+    let priColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--pri-back-color');
+    let secColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--sec-back-color');
+
+    document.querySelector('.color-code').innerText = priColor;
+    document.querySelector('.color-code-sec').innerText = secColor;
 }
 
-flatSwitch.addEventListener("click",flatColor);
-function flatColor(){
-    
+flatSwitch.addEventListener("click", flatColor);
+function flatColor() {
+
     document.documentElement.style.setProperty('--pri-back-color', 'rgb(52, 178, 228)');
+    document.documentElement.style.setProperty('--sec-back-color', 'var(--flat-sec-color');
+    let priColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--pri-back-color');
+    // console.log
+    let secColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--sec-back-color');
+
+    document.querySelector('.color-code').innerText = priColor;
+    document.querySelector('.color-code-sec').innerText = secColor;
 }
 
-sunsetSwitch.addEventListener("click",sunsetColor);
-function sunsetColor(){
-    
+sunsetSwitch.addEventListener("click", sunsetColor);
+function sunsetColor() {
+
     document.documentElement.style.setProperty('--pri-back-color', 'rgb(248, 53, 53)');
+    document.documentElement.style.setProperty('--sec-back-color', 'var(--sunset-sec-color');
+    let priColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--pri-back-color');
+    let secColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--sec-back-color');
+
+    document.querySelector('.color-code').innerText = priColor;
+    document.querySelector('.color-code-sec').innerText = secColor;
 }
 
-subtleSwitch.addEventListener("click",subtleColor);
-function subtleColor(){
-    
+subtleSwitch.addEventListener("click", subtleColor);
+function subtleColor() {
+
     document.documentElement.style.setProperty('--pri-back-color', 'rgb(129, 131, 124)');
+    document.documentElement.style.setProperty('--sec-back-color', 'var(--subtle-sec-color');
+    let priColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--pri-back-color');
+    let secColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--sec-back-color');
+
+    document.querySelector('.color-code').innerText = priColor;
+    document.querySelector('.color-code-sec').innerText = secColor;
 }
 
-seafoamSwitch.addEventListener("click",seafoamColor);
-function seafoamColor(){
-    
+seafoamSwitch.addEventListener("click", seafoamColor);
+function seafoamColor() {
+
     document.documentElement.style.setProperty('--pri-back-color', 'rgb(22, 112, 38)');
+    document.documentElement.style.setProperty('--sec-back-color', 'var(--seafoam-sec-color');
+    let priColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--pri-back-color');
+    let secColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--sec-back-color');
+
+    document.querySelector('.color-code').innerText = priColor;
+    document.querySelector('.color-code-sec').innerText = secColor;
 }
 
-greenSwitch.addEventListener("click",greenColor);
-function greenColor(){
-    
-    document.documentElement.style.setProperty('--pri-back-color', 'yellowgreen');
+greenSwitch.addEventListener("click", showColor);
+function showColor() {
+
+    // document.documentElement.style.setProperty('--pri-back-color', 'yellowgreen');
+    let colorInput1 = document.querySelector('.color-input');
+    colorInput1.click();
+
 }
 
-pinkSwitch.addEventListener("click",pinkColor);
-function pinkColor(){
-    
-    document.documentElement.style.setProperty('--pri-back-color', 'pink');
+let priColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--pri-back-color');
+// console.log
+document.querySelector('.color-code').innerText = priColor;
+let secColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--sec-back-color');
+// console.log
+document.querySelector('.color-code-sec').innerText = secColor;
+
+pinkSwitch.addEventListener("click", showColor2);
+function showColor2() {
+    console.log("hello")
+    // document.documentElement.style.setProperty('--pri-back-color', 'yellowgreen');
+    let colorInput2 = document.querySelector('.color-input2');
+    colorInput2.click();
+    colorInput2.setAttribute('value', 'rgb(0,250,0')
+
 }
 
-orangeSwitch.addEventListener("click",orangeColor);
-function orangeColor(){
-    
-    document.documentElement.style.setProperty('--pri-back-color', 'orange');
-}
 
-aquaSwitch.addEventListener("click",aquaColor);
-function aquaColor(){
-    
-    document.documentElement.style.setProperty('--pri-back-color', 'aqua');
-}
 
-tomatoSwitch.addEventListener("click",tomatoColor);
-function tomatoColor(){
-    
-    document.documentElement.style.setProperty('--pri-back-color', 'tomato');
-}
+//-----------------------dropdowns---------------------------//
+// {
+//     let tVar = false;
+//     let toggleBtn = document.querySelector(".landinglink");
+//     let menu = document.querySelector(".landing");
+
+//     toggleBtn.addEventListener("click", toggle);
+//     // toggleBtn.addEventListener("c", toggle);
+
+//     function toggle() {
+//         if (tVar === false) {
+//             show();
+//             tVar = true;
+//             console.log(tVar)
+
+//         }
+//         else if (tVar === true) {
+//             hide();
+//             tVar = false
+//             console.log(tVar)
+//         }
+
+
+//     }
+
+//     function show() {
+//         //  console.log(menu)
+//         console.log(tVar)
+//         menu.style.top = "var(--drop-width)";
+//         menu.style.opacity = "1";
+
+//     }
+
+//     function hide() {
+//         // let menu=document.querySelectorAll(".navbar li");
+//         //  console.log(menu)
+
+//         menu.style.top = "-1000px";
+//         menu.style.opacity = "0";
+
+//     }
+//     window.onclick = function (e) {
+
+//         if (tVar == true) {
+//             if (e.target.matches('.landing') || !e.target.matches('.landinglink')) {
+//                 hide();
+//                 // console.log("FDF")
+
+
+//             }
+//         }
+//     }
+
+// }
