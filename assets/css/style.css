@@ -201,8 +201,8 @@ a{
       color:var(--pri-back-color) !important;
       border:none;
       border-radius: 3px;
-      padding: 8px 15px;
-      font-size: 1rem;
+      padding: 8px 15px !important;
+      font-size: 1rem !important;
       margin-top:20px;
       margin-left: 0 !important;
     font-weight: 550;

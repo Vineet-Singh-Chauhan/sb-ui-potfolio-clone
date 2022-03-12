@@ -1,12 +1,6 @@
 
 //--------------------navbar----------------------------------//
-// let windowWidth=document.body.clientWidth;
-// console.log(windowWidth)
-// if(windowWidth>=992){
-//     menu.forEach(function (element) {
-//         element.style.display = "inline";
-//     }
-//     )}
+
 {
     let tVar = false;
     let toggleBtn = document.querySelector(".tBtn");
@@ -43,17 +37,7 @@
             element.style.display = "none";
         })
     }
-    // window.onclick = function(e) {
 
-    //     if(tVar==true){
-    //     if (!e.target.matches('.navbar') || !e.target.matches('.tBtn') ) {
-    //         hide();
-    //         // console.log("FDF")
-
-
-    //     }
-    //   }
-    // }
 
 }
 
@@ -204,12 +188,22 @@ document.querySelector('.color-code-sec').innerText = secColor;
 
 pinkSwitch.addEventListener("click", showColor2);
 function showColor2() {
-    console.log("hello")
+    // console.log("hello")
     // document.documentElement.style.setProperty('--pri-back-color', 'yellowgreen');
     let colorInput2 = document.querySelector('.color-input2');
     colorInput2.click();
     colorInput2.setAttribute('value', 'rgb(0,250,0')
 
+}
+function change2(){
+    let colorInput2value = document.querySelector('.color-input2').value;
+    console.log(colorInput2value)
+    document.documentElement.style.setProperty('--sec-back-color',colorInput2value );
+}
+function change1(){
+    let colorInput1value = document.querySelector('.color-input').value;
+    console.log(colorInput1value)
+    document.documentElement.style.setProperty('--pri-back-color',colorInput1value );
 }
 
 
@@ -227,13 +221,13 @@ function showColor2() {
         if (tVar === false) {
             show();
             tVar = true;
-            console.log(tVar)
+            // console.log(tVar)
 
         }
         else if (tVar === true) {
             hide();
             tVar = false
-            console.log(tVar)
+            // console.log(tVar)
         }
 
 
@@ -256,7 +250,7 @@ function showColor2() {
         // menu.style.top = "-1000px";
         menu.style.opacity = "0";
         menu.classList.add('d-none');
-        console.log(menu.classList)
+        // console.log(menu.classList)
 
     }
     window.onclick = function (e) {
@@ -286,13 +280,13 @@ function showColor2() {
         if (tVar === false) {
             show();
             tVar = true;
-            console.log(tVar)
+            // console.log(tVar)
 
         }
         else if (tVar === true) {
             hide();
             tVar = false
-            console.log(tVar)
+            // console.log(tVar)
         }
 
 
@@ -304,7 +298,7 @@ function showColor2() {
         // menu.style.top = "var(--drop-width)";
         menu.style.opacity = "1";
         menu.classList.remove('d-none');
-        console.log(menu.classList)
+        // console.log(menu.classList)
 
     }
 
@@ -315,7 +309,7 @@ function showColor2() {
         // menu.style.top = "-1000px";
         menu.style.opacity = "0";
         menu.classList.add('d-none');
-        console.log(menu.classList)
+        // console.log(menu.classList)
 
     }
     window.onclick = function (e) {
@@ -345,13 +339,13 @@ function showColor2() {
         if (tVar === false) {
             show();
             tVar = true;
-            console.log(tVar)
+            // console.log(tVar)
 
         }
         else if (tVar === true) {
             hide();
             tVar = false
-            console.log(tVar)
+            // console.log(tVar)
         }
 
 
@@ -374,7 +368,7 @@ function showColor2() {
         // menu.style.top = "-1000px";
         menu.style.opacity = "0";
         menu.classList.add('d-none');
-        console.log(menu.classList)
+        // console.log(menu.classList)
 
     }
     window.onclick = function (e) {
