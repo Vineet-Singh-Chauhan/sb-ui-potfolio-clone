@@ -178,13 +178,12 @@ function showColor() {
 }
 
 let priColor = getComputedStyle(document.documentElement)
-    .getPropertyValue('--pri-back-color');
-// console.log
-document.querySelector('.color-code').innerText = priColor;
-let secColor = getComputedStyle(document.documentElement)
-    .getPropertyValue('--sec-back-color');
-// console.log
-document.querySelector('.color-code-sec').innerText = secColor;
+        .getPropertyValue('--pri-back-color');
+    let secColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--sec-back-color');
+
+    document.querySelector('.color-code').innerText = priColor;
+    document.querySelector('.color-code-sec').innerText = secColor;
 
 pinkSwitch.addEventListener("click", showColor2);
 function showColor2() {
@@ -197,13 +196,25 @@ function showColor2() {
 }
 function change2(){
     let colorInput2value = document.querySelector('.color-input2').value;
-    console.log(colorInput2value)
+    // console.log(colorInput2value)
     document.documentElement.style.setProperty('--sec-back-color',colorInput2value );
+    
+    let secColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--sec-back-color');
+
+   
+    document.querySelector('.color-code-sec').innerText = secColor;
 }
 function change1(){
     let colorInput1value = document.querySelector('.color-input').value;
-    console.log(colorInput1value)
+    // console.log(colorInput1value)
     document.documentElement.style.setProperty('--pri-back-color',colorInput1value );
+    let priColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--pri-back-color');
+    
+
+    document.querySelector('.color-code').innerText = priColor;
+    
 }
 
 
